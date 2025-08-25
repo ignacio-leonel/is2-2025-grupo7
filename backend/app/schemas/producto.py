@@ -3,20 +3,20 @@
 from pydantic import BaseModel
 
 
-class ProductoBase(BaseModel):
+class Producto(BaseModel):
     name: str
     price: float
     stock: int
     
 
-class ProductoCreate(ProductoBase):
+class ProductoCreate(Producto):
     pass
 
-class ProductoUpdatte(ProductoBase):
+class ProductoUpdate(Producto):
     pass
 
 
-class ProductoRead(BaseModel):
+class ProductoRead(Producto):
     id: int
     
     class config:
