@@ -1,0 +1,35 @@
+# Archivos compilados
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Archivos de entorno
+.env
+*.env
+
+# Archivos de logs
+*.log
+
+# Virtualenv
+venv/
+ENV/
+
+# Alembic caché
+alembic/__pycache__/
+migrations/__pycache__/
+
+# Archivos de Docker
+*.pid
+*.seed
+*.bak
+*.swp
+*.swo
+
+# IDEs
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
