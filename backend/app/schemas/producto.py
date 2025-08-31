@@ -1,23 +1,31 @@
 
 
+
 from pydantic import BaseModel
+from datetime import datetime
+from typing import Optional
 
 
-class Producto(BaseModel):
-    name: str
-    price: float
+class ProductoBase(BaseModel):
+    nombre: str
+    descrpcion: Optional[str] = None
+    precio: float
     stock: int
+    categoria: Optional[str] = None
     
 
-class ProductoCreate(Producto):
+    
+
+class ProductoCreate(ProductoBase):
     pass
 
-class ProductoUpdate(Producto):
+class ProductoUpdate(ProductoBase):
     pass
 
 
-class ProductoRead(Producto):
+class ProductoRead(ProductoBase):
     id: int
+    fecha_creacion: datetime
     
-    class config:
+    class Config:
         orm_mode = True
