@@ -29,3 +29,4 @@ class ProductoRead(ProductoBase):
     
     class Config:
         orm_mode = True
+        
