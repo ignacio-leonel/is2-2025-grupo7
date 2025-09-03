@@ -19,7 +19,7 @@
 ---
 
 ## ✅ Semana 2 – ORM + Domain + Schemas (modelo de datos completo)
-- Tareas completadas: 0/4 ❌ (abiertas)  
+- Tareas completadas: 1/4 ❌ (abiertas)  
 - Cambios incorporados por los compañeros:
   - **Validación de unicidad** en `ProductoORM` (campos `nombre` y `sku`).
   - Creación de **Base declarativa** en `backend/app/db/base.py`.
