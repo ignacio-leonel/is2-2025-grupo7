@@ -5,8 +5,8 @@ class ProductoORM(base):
     __tablename__ = "productos"
     
     id = Column(Integer, primary_key=True, index=True)
-    nombre = Column(String, unique=True, index=True)
-    sku = Column(String, unique=True, index=True)
+    nombre = Column(String, unique = True, index = True)
+    sku = Column(String, unique = True, index = True)
     categoria = Column(String)
     descripcion = Column(String)
     unidad_medida = Column(String)
