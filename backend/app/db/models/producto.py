@@ -1,9 +1,12 @@
+from sqlalchemy import Column, Integer, String
+from backend.app.db.base import base # clase de la base de dato de SQLAlchemy
 
-class ProductORM:
-    def __init__(self, id, nombre, SKU, categoria, descripcion, unidad_medida):
-        self.id= id
-        self.nombre = nombre
-        self.SKU = SKU
-        self.categoria = categoria
-        self.descripcion = descripcion
-        self.unidad_medida = unidad_medida
+class ProductoORM(base):
+    __tablename__ = "productos"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    nombre = Column(String, unique = True, index = True)
+    sku = Column(String, unique = True, index = True)
+    categoria = Column(String)
+    descripcion = Column(String)
+    unidad_medida = Column(String)

@@ -1,23 +1,13 @@
+from sqlalchemy import Column, Integer, String, Float
+from backend.app.db.base import Base
 
+# Modelo ORM para productos
+class ProductoORM(Base):
+    __tablename__ = "producto"
 
-from pydantic import BaseModel
-
-
-class Producto(BaseModel):
-    name: str
-    price: float
-    stock: int
-    
-
-class ProductoCreate(Producto):
-    pass
-
-class ProductoUpdate(Producto):
-    pass
-
-
-class ProductoRead(Producto):
-    id: int
-    
-    class config:
-        orm_mode = True
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String, unique=True)         # Nombre único
+    descripcion = Column(String, nullable=True)  # Descripción opcional
+    precio = Column(Float)                        # Precio del producto
+    stock = Column(Integer)                       # Cantidad en stock
+    categoria = Column(String, nullable=True)    # Categoría opcional
