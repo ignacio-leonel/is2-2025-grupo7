@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 from backend.app.db.base import base # clase de la base de dato de SQLAlchemy
 
 class ProductoORM(base):
@@ -10,3 +11,5 @@ class ProductoORM(base):
     categoria = Column(String)
     descripcion = Column(String)
     unidad_medida = Column(String)
+
+movimientos = relationship("MovimientoORM", back_populates="producto")
