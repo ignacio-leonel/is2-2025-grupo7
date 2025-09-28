@@ -37,3 +37,8 @@ backend.db
 .env
 __pycache__/
 *.pyc
+.venv/
+backend.db
+.env
+__pycache__/
+*:pyc
