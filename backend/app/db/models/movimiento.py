@@ -1,4 +1,3 @@
-# module: backend/app/db/models/movimiento.py
 from sqlalchemy import Column, Integer, ForeignKey, DateTime, Enum, CheckConstraint, text
 from sqlalchemy.orm import relationship
 from backend.app.domain.models.movimiento import TipoMovimiento
@@ -25,7 +24,6 @@ class MovimientoORM(base):
     deposito_destino = relationship("DepositoORM",foreign_keys=[deposito_destino_id],back_populates="movimientos_destino")
     usuario = relationship("UsuarioORM")
 
-    # Representación para debugging
     def __repr__(self):
         return (
             f"<MovimientoORM(id={self.id}, producto_id={self.producto_id}, "
