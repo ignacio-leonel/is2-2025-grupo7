@@ -1,32 +1,39 @@
-# Archivos compilados
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 
+# Entornos virtuales
+.venv/
+venv/
+env/
+
 # Archivos de entorno
 .env
-*.env
 
-# Archivos de logs
+# Logs
 *.log
 
-# Virtualenv
-venv/
-ENV/
+# Caches de herramientas
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 
-# Alembic caché
-alembic/__pycache__/
-migrations/__pycache__/
+# Build / empaquetado
+dist/
+build/
+*.egg-info/
 
-# Archivos de Docker
+# Docker / Contenedores
 *.pid
 *.seed
 *.bak
 *.swp
 *.swo
 
-# IDEs
+# IDEs / Editores
 .vscode/
 .idea/
 
