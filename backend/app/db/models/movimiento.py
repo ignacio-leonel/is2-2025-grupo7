@@ -2,9 +2,9 @@
 from sqlalchemy import Column, Integer, ForeignKey, DateTime, Enum, CheckConstraint, text
 from sqlalchemy.orm import relationship
 from backend.app.domain.models.movimiento import TipoMovimiento
-from backend.app.db.base import EntityBase
+from backend.app.db.base import base # clase de la base de dato de SQLAlchemy
 
-class MovimientoORM(EntityBase):
+class MovimientoORM(base):
     __tablename__ = "movimientos"
     __table_args__ = (
         CheckConstraint('cantidad >= 0', name='ck_movimientos_cantidad_non_negative'),
