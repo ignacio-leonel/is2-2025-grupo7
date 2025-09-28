@@ -32,4 +32,8 @@ migrations/__pycache__/
 
 # Archivos del sistema
 .DS_Store
-Thumbs.db
+Thumbs.db.venv/
+backend.db
+.env
+__pycache__/
+*.pyc
